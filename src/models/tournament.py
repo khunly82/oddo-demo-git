@@ -1,8 +1,13 @@
-from models.database import Base
+from __future__ import annotations
+from models.database import Base, registrations
 from enum import Flag, Enum, auto
 from sqlalchemy import Enum as EnumSQL
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from datetime import date
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from models import Player
 
 class TournamentStatus(Enum):
     PENDING = 'PENDING'
@@ -25,6 +30,8 @@ class Tournament(Base):
     max_elo: Mapped[int] = mapped_column()
     start_date: Mapped[date] = mapped_column()
     categories: Mapped[int] = mapped_column()
+    players: Mapped[list[Player]] = relationship(secondary=registrations)
     status: Mapped[TournamentStatus] = mapped_column(EnumSQL(TournamentStatus, name='tournament_status'), default=TournamentStatus.PENDING)
     woman_only: Mapped[bool] = mapped_column(default=False)
     current_round: Mapped[int] = mapped_column(default=0)
+
