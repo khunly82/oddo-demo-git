@@ -93,8 +93,10 @@ git merge <branche>
 *Synchroniser local -> remote*
 ```sh
 git push <remote> <branch>
-#ou
+#ou synchroniser toutes les branches
 git push <remote> --all
+#ou synchroniser les tags
+git push <remote> --tags
 ```
 
 *Synchroniser remote -> local*
@@ -102,5 +104,31 @@ git push <remote> --all
 git fetch <remote> <branch> (sans modifier le working tree)
 #ou
 git pull <remote> <branch> (en mettant à jour le working tree)
+```
+
+## Branches / tags
+
+*Créer une branche*
+```sh
+git branch <branch>
+```
+
+*Supprimer une branche*
+```sh
+git branch -d <branch>
+```
+
+*Changer de branche*
+```sh
+git checkout <branch,commit,tag>
+git switch <branch>
+
+# créer la branche en meme temps
+git checkout -b <branch>
+```
+
+*Ajouter un tag*
+```sh
+git tag <tag>
 ```
 
