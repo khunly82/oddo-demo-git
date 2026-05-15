@@ -82,5 +82,25 @@ git stash clear
 ```sh
 git reset <nom du commit> ou <HEAD~x> --hard
 ```
+
+*Fusionner le working tree avec sur une branche de l'historique*
+```sh
+git merge <branche>
+```
+
 #Commandes distantes
+
+*Synchroniser local -> remote*
+```sh
+git push <remote> <branch>
+#ou
+git push <remote> --all
+```
+
+*Synchroniser remote -> local*
+```sh
+git fetch <remote> <branch> (sans modifier le working tree)
+#ou
+git pull <remote> <branch> (en mettant à jour le working tree)
+```
 
