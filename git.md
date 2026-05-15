@@ -82,4 +82,5 @@ git stash clear
 ```sh
 git reset <nom du commit> ou <HEAD~x> --hard
 ```
+#Commandes distantes
 
