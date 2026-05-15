@@ -53,3 +53,5 @@ class Tournament(Base):
         CheckConstraint('min_players <= max_players'),
     )
 
+# ajout d'un commentaire
+
