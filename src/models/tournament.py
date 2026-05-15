@@ -33,7 +33,7 @@ class Tournament(Base):
     start_date: Mapped[date] = mapped_column()
     categories: Mapped[int] = mapped_column()
     status: Mapped[TournamentStatus] = mapped_column(EnumSQL(TournamentStatus, name='tournament_status'), default=TournamentStatus.PENDING)
-    woman_only: Mapped[bool] = mapped_column(default=False)
+    woman_only: Mapped[bool] = mapped_column(default=True)
     current_round: Mapped[int] = mapped_column(default=0)
     
     players: Mapped[list[Player]] = relationship(
@@ -53,5 +53,5 @@ class Tournament(Base):
         CheckConstraint('min_players <= max_players'),
     )
 
-# ajout d'un commentaire
+# ajout d'un commentaire et d'un complément de commentaire
 
