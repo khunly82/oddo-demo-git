@@ -106,6 +106,11 @@ git fetch <remote> <branch> (sans modifier le working tree)
 git pull <remote> <branch> (en mettant à jour le working tree)
 ```
 
+*Git rebase squash*
+```sh
+git rebase -i HEAD~x
+```
+
 ## Branches / tags
 
 *Créer une branche*
@@ -132,6 +137,3 @@ git checkout -b <branch>
 git tag <tag>
 ```
 
-<!-- test -->
-<!-- test 2 -->
-<!-- test 3 -->
