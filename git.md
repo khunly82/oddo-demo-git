@@ -56,3 +56,5 @@ git commit -m "message"
 git commit -a -m "message"  
 ```
 
+#Commandes distantes#
+
