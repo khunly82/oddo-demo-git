@@ -17,3 +17,5 @@ registrations = Table(
     Column("tournament_id", ForeignKey("tournaments.id")),
     Column("player_id", ForeignKey("players.id")),
 )
+
+# Ajout d'un autre commentaire bidon

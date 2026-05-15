@@ -41,3 +41,5 @@ class Player(Base):
         init=False,
         default_factory=list
     )
+
+# Ajout d'un commentaire bidon
