@@ -18,4 +18,3 @@ registrations = Table(
     Column("player_id", ForeignKey("players.id")),
 )
 
-# Ajout d'un autre commentaire bidon

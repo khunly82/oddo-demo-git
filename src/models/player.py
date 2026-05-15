@@ -16,7 +16,7 @@ class Gender(Enum):
 
 class Player(Base):
     __tablename__ = 'players'
-    id: Mapped[int] = mapped_column(primary_key=True, init=False)
+    id: Mapped[int] = mapped_column# Ajout d'un commentaire bidon(primary_key=True, init=False)
     username: Mapped[str] = mapped_column(unique=True)
     address: Mapped[str] = mapped_column()
     email: Mapped[str] = mapped_column(unique=True)
@@ -42,4 +42,4 @@ class Player(Base):
         default_factory=list
     )
 
-# Ajout d'un commentaire bidon
+
