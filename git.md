@@ -53,6 +53,6 @@ git commit -m "message"
 
 *Ajouter dans le staging et dans l'historique*
 ```sh
-git commit -a -m "message"
+git commit -a -m "message"  
 ```
 
