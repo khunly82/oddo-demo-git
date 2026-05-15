@@ -1,11 +1,11 @@
 from __future__ import annotations
+from typing import TYPE_CHECKING
 
 from models.database import Base, registrations
 from sqlalchemy import Enum as EnumSQL
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from datetime import date
 from enum import Enum
-from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from models import Tournament, Matchup
 

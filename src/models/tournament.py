@@ -1,10 +1,11 @@
 from __future__ import annotations
+from typing import TYPE_CHECKING
+
 from models.database import Base, registrations
 from enum import Flag, Enum, auto
 from sqlalchemy import Enum as EnumSQL, CheckConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from datetime import date
-from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from models import Player, Matchup
@@ -18,6 +19,7 @@ class TournamentCategory(Flag):
     JUNIOR = auto() # 1
     SENIOR = auto() # 2
     VETERAN = auto() # 4
+    
 
 class Tournament(Base):
     __tablename__ = 'tournaments'
