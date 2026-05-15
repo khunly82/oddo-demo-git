@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from sqlalchemy import Column, ForeignKey, Table, create_engine
-from sqlalchemy.orm import DeclarativeBase, MappedAsDataclass
+from sqlalchemy.orm import DeclarativeBase, MappedAsDataclass, sessionmaker
 
 load_dotenv()
 
@@ -18,3 +18,5 @@ registrations = Table(
     Column("player_id", ForeignKey("players.id")),
 )
 
+def Session():
+    return sessionmaker(bind=engine)();
